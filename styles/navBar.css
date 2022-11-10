@@ -1,0 +1,39 @@
+html, body, main, header, section{
+    height: 100%;
+    background: var(--bg);
+
+    background-image: radial-gradient(
+        var(--navBg) 9%,
+        transparent 9%
+    );
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+}
+
+header{
+    padding-left: 7em;
+}
+
+body > header{
+    display: flex;
+    align-items: center;
+}
+
+body > header > nav > a{
+    display: block;
+    margin: 3em 0;
+
+    font-size: 36pt;
+    text-decoration: none;
+    color: var(--white);
+
+    transition: all 0.4s ease;
+}
+
+body > header > nav:hover > a{
+    opacity: 0.5;
+}
+
+body > header > nav:hover > a:hover{
+    opacity: 1;
+}

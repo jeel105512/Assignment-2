@@ -1,0 +1,144 @@
+@import url(./reset.css);
+@import url(./navBar.css);
+
+*{
+    /* outline: 1px dotted #fff; */
+}
+
+:root{
+    --white : #fff;
+    --primary: #38ff8e;
+    --secondary: #20ff6e;
+    --hover: #adff3b;
+    --bg: #141414;
+    --nobg: #ffffff00;
+    --navBg: rgba(255, 255, 255, 0.1);
+    --iconShadow: #ffffff4d;
+    /* --font:  'Roboto', sans-serif; */
+}
+
+.light-mode{
+    --white : rgb(0, 0, 0);
+    --primary: #fff238;
+    --secondary: #d6ff20;
+    --hover: #ffd13b;
+    --bg: #ffffff;
+    --nobg: #ffffff00;
+    --navBg: rgba(0, 0, 0, 0.1);
+    /* --font: 'Source Sans Pro', sans-serif; */
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Main */
+body > main{
+    color: var(--white);
+    padding: 1em;
+}
+
+body > main > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > main > section > div{
+    width: 70%;
+    height: 70%;
+    padding: 1em;
+}
+
+body > main > section > div > .main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    background: var(--navBg);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+body > main > section > div > .main-container > h1{
+    font-size: 40pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#nameHover{
+    color: var(--primary);
+    letter-spacing: normal;
+
+    transition: all 0.4s ease;
+}
+
+#nameHover:hover{
+    color: var(--hover);
+    letter-spacing: 5px;
+}
+
+body > main > section > div > .main-container > p{
+    font-size: 18pt;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+body > main > section > div > .main-container > a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14pt;
+    background: var(--nobg);
+    letter-spacing: normal;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 0.6em;
+    font-weight: normal;
+    transition: all 0.4s ease;
+}
+
+body > main > section > div > .main-container > a:hover{
+    background: var(--hover);
+    border: 1px solid var(--primary);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+/* Footer */
+body > footer{
+    color: var(--white);
+    padding: 1em;
+    font-size: large;
+    background: var(--bg);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Theme Button */
+.theme-btn{
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--bg);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.theme-btn i{
+    font-size: 1.4rem;
+    pointer-events: none;
+    color: var(--primary);
+}
